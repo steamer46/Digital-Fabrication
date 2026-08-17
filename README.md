@@ -1,6 +1,9 @@
 # Digital-Fabrication
 2026 Digital Fabrication 대회 프로젝트
 
+&nbsp;
+
+
 # ☁️ Smart Weather & Vision Interactive System
 > **YOLOv8 기반 실시간 객체 인지 및 유·무선 하이브리드 통신 제어 스마트 디바이스**
 
@@ -12,29 +15,37 @@
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
 
 ---
+&nbsp;
 
 ## 📌 Project Overview
+&nbsp;
 
 비전 인지 기술(YOLOv8)과 마이크로컨트롤러(ESP32, Arduino) 제어, 3D 프린팅을 융합한 **스마트 인터랙티브 디바이스**입니다.  
-사용자 동작 감지, 실시간 기상 데이터(Open-Meteo API) 수집, LED 매트릭스 시각화, TTS 음성 브리핑을 유·무선 하이브리드 통신 파이프라인으로 연결하여 구동합니다.
+사용자 감지, 실시간 기상 데이터(Open-Meteo API) 수집, LED 매트릭스 시각화, TTS 음성 브리핑을 유·무선 하이브리드 통신 파이프라인으로 연결, 버튼을 통한 스테핑 모터와 펜 작동입니다.
 
 | **최종 시스템 구성** | **실시간 비전 & 인터랙션 구동컷** |
 
-| <img src="./images/award.jpg" width="450"/> | <img src="./images/device_main.jpg" width="450"/> |
+| <img width="450" height="306" alt="image" src="https://github.com/user-attachments/assets/c22b782a-9b88-45b5-97fc-f2d3adace322" />
+ | <img width="450" height="600" alt="KakaoTalk_20260818_013352085_01" src="https://github.com/user-attachments/assets/910ad5d1-a9de-4fad-b46d-a85a316701e3" />
+|
 
 ---
-
+&nbsp;
 ## 🎬 System Demonstration
+&nbsp;
 
 실시간 카메라 인지 -> 위치 기반 강수확률 및 기온 데이터 수집 ->  LED 매트릭스 구름 아이콘 시각화 -> TTS 음성 안내까지 통합 실행 -> 버튼 누를시에 우산탈수 진행되는 구동 영상입니다.
 
 | **실시간 통합 시스템 구동 시연 (Video)** |
 
-| <video src="https://github.com/user-attachments/assets/YOUR_VIDEO_ASSET_ID" controls width="100%"></video> |
+
+https://github.com/user-attachments/assets/db6fbb0d-275c-4efe-8234-85f046232f55
+
 
 ---
-
+&nbsp;
 ## 📡 System Architecture & Communication Pipeline
+&nbsp;
 
 저지연 모니터링과 하드웨어 제어의 안정성을 위해 **유·무선 통신 파이프라인을 분리 융합**했습니다.
 
@@ -47,9 +58,12 @@
    * YOLOv8n 검출 패킷을 ESP32 보드로 전송하기 위한 유선 Serial 통신 연결.
    * **115200 bps Baud Rate**로 동기화하여 실시간 패킷 손실 차단.
 
+
 ---
+&nbsp;
 
 ## 💻 Software Troubleshooting
+&nbsp;
 
 | No. | 구분 | 문제 상황 (Issue) | 원인 (Cause) | 해결 방안 (Solution) |
 
@@ -64,7 +78,7 @@
 | **5** | **Network** | 음성/데이터 스트리밍 끊김 현상 | 2.4 GHz 와이파이 대역의 주파수 간섭 발생 | 대역폭이 넓고 간섭이 적은 **5 GHz 독립 대역**으로 전환 |
 
 ---
-
+&nbsp;
 ## 🔌 Hardware Troubleshooting
 
 ### 1. 케이블 연결 유격 및 단선 방지 (Soldering)
@@ -88,24 +102,37 @@
 * **해결:** LED 전원 측 입력 전압을 벅 컨버터로 미세 조율하여 **최적 동작 전압인 4.2V**로 설정, 신호 인식률 극대화.
 
 ---
+&nbsp;
 
 ## 🛠️ Hardware & Circuit Fabrication
+&nbsp;
+*ESP32, 아두이노, 벅컨버터, LED 매트릭스 통합 배선*
+&nbsp;
+| **내부 전원 & 제어 회로 배선** |
 
-| **내부 전원 & 제어 회로 배선** | **스테핑 모터 & A4988 드라이버** |
-| <img src="./images/circuit_internal.jpg" width="450"/> | <img src="./images/motor_driver.jpg" width="450"/> |
-| *ESP32, 아두이노, 벅컨버터, LED 매트릭스 통합 배선* | *A4988 드라이버 및 스테핑 모터 제어 파트* |
+| <img width="450" height="600" alt="KakaoTalk_20260818_013352085_02" src="https://github.com/user-attachments/assets/ac023553-5baa-4b72-98dd-02b5c9afd513" /> |
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
 
 | **3D 프린팅 하우징 제작** | **Wokwi 펌웨어 시뮬레이션** |
-| :---: | :---: |
-| <img src="./images/housing_3dprint.jpg" width="450"/> | <img src="./images/wokwi_simulation.jpg" width="450"/> |
+
+|  <img width="450" height="800" alt="KakaoTalk_20260818_040254419" src="https://github.com/user-attachments/assets/4e0ad1c1-2f8d-4deb-b447-3102ff72e99f" /> 
+| <img width="450" height="240" alt="KakaoTalk_20260818_013352085_08" src="https://github.com/user-attachments/assets/444b0194-0342-4087-b27a-e590f77eba2e" /> |
+
 | *레트로 TV 스타일 모니터 & 메인 하우징 설계* | *ESP32 + ILI9341 LCD + Open-Meteo API 검증* |
 
 ---
+&nbsp;
 
 ## 🎯 Custom Dataset & Model Training
+&nbsp;
 
 * **YOLOv8 Vision Model:**  
   * 카메라 입력에서 인원(`person`) 및 객체를 실시간 검출.
  ---
+
+ 
 
 
